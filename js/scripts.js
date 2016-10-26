@@ -4,6 +4,13 @@ function wordShifter(inputOne) {
   var suffixAy = "ay"
   var splitWord = inputOne.split("");
 
+  if (splitWord[0] === ("q" || "Q") && splitWord[1] === ("u" || "U")) {
+    var firstQ = splitWord.shift();
+    var firstU = splitWord.shift();
+    var changedArray = splitWord.push(firstQ);
+    var changedArray = splitWord.push(firstU);
+  }
+
   for (index=0; index < splitWord.length; index++) {
     consonantArray.map(function(comparison){
     if (comparison === splitWord[0]) {
