@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Latin</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pig Latin Generator App</h1>
+
+      <form id="pigLatinForm">
+        <div class="form-group">
+          <label for="pigLatin">Enter a word or phrase to translate into Pig Latin:</label>
+          <input id="pigLatin" type="text">
+        </div>
+
+        <button type="submit" class="btn">Convert to PL!</button>
+      </form>
+
+      <div id="result">
+        <p>Your new sentence says: <span class="converted"></span>. How wacky is that??</p>
+      </div>
+    </div>
+  </body>
+</html>
