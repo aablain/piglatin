@@ -3,13 +3,16 @@ function wordShifter(inputOne) {
   var consonantArray = ["b", "B", "c", "C", "d", "D", "f", "F", "g", "G", "h", "H", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z"];
   var suffixAy = "ay"
   var splitWord = inputOne.split("");
+
+  for (index=0; index < splitWord.length; index++) {
     consonantArray.map(function(comparison){
     if (comparison === splitWord[0]) {
-      var firstItem = splitWord.shift()
+      var firstItem = splitWord.shift();
       var changedArray = splitWord.push(firstItem);
-      }
-    });
-    
+    }
+  });
+};
+
     vowelArray.map(function(comparison){
     if (comparison === splitWord[0]) {
       splitWord.push(suffixAy);
