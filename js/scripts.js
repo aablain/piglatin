@@ -16,6 +16,12 @@ function wordShifter(inputOne) {
     if (comparison === splitWord[0]) {
       var firstItem = splitWord.shift();
       var changedArray = splitWord.push(firstItem);
+      if (splitWord[0] === ("q" || "Q") && splitWord[1] === ("u" || "U")) {
+        var firstQ = splitWord.shift();
+        var firstU = splitWord.shift();
+        var changedArray = splitWord.push(firstQ);
+        var changedArray = splitWord.push(firstU);
+      }
     }
   });
 };
