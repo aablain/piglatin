@@ -2,8 +2,13 @@ function wordShifter(inputOne) {
   var vowelArray = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
   var consonantArray = ["b", "B", "c", "C", "d", "D", "f", "F", "g", "G", "h", "H", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z"];
   var suffixAy = "ay"
-  var splitWord = inputOne.split("");
+  var splitSentence = inputOne.split(" ");
+  var finalSentence =[];
 
+ debugger;
+  splitSentence.map(function(inputTwo){
+    debugger;
+  var splitWord = inputTwo.split("");
   if (splitWord[0] === ("q" || "Q") && splitWord[1] === ("u" || "U")) {
     var firstQ = splitWord.shift();
     var firstU = splitWord.shift();
@@ -16,6 +21,8 @@ function wordShifter(inputOne) {
     if (comparison === splitWord[0]) {
       var firstItem = splitWord.shift();
       var changedArray = splitWord.push(firstItem);
+
+
       if (splitWord[0] === ("q" || "Q") && splitWord[1] === ("u" || "U")) {
         var firstQ = splitWord.shift();
         var firstU = splitWord.shift();
@@ -26,6 +33,7 @@ function wordShifter(inputOne) {
   });
 };
 
+
     vowelArray.map(function(comparison){
     if (comparison === splitWord[0]) {
       splitWord.push(suffixAy);
@@ -33,7 +41,11 @@ function wordShifter(inputOne) {
     });
 
   var joiner = splitWord.join("");
-  return joiner;
+  finalSentence.push(joiner)
+});
+
+  var joinAgain = finalSentence.join(" ");
+  return joinAgain;
 };
 
 
